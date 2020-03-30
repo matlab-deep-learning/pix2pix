@@ -23,7 +23,7 @@ Make sure you have the minimum following requirements:
 ### Installation
 
 
-First off clone or download the repository to get a copy of the code. Then run the function `install.m` to ensure that all required files are added to the MATLAB path.
+First off [clone](https://github.com/matlab-deep-learning/pix2pix.git) or [download](https://github.com/matlab-deep-learning/pix2pix/archive/master.zip) the repository to get a copy of the code. Then run the function `install.m` to ensure that all required files are added to the MATLAB path.
 
 ```matlab
 install();
@@ -75,7 +75,7 @@ Run an example you can directly run in MATLAB see the [Getting Started](docs/get
 
 ## Any problems?
 
-If you have any trouble using this code, report any bugs, or want to request a feature please use the [GitHub issues](#TODO).
+If you have any trouble using this code, report any bugs, or want to request a feature please use the [GitHub issues](https://github.com/matlab-deep-learning/pix2pix/issues).
 
 ## Finally
 
