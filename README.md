@@ -1,6 +1,6 @@
 # pix2pix - Image to Image Translation Using Generative Adversarial Networks
 
-This respository contains MATLAB code to implement the pix2pix image to image tranlsation method described in the paper by [Isola et al. *Image-to-Image Translation with Conditional Adversarial Nets*](https://phillipi.github.io/pix2pix/).
+This repository contains MATLAB code to implement the pix2pix image to image translation method described in the paper by [Isola et al. *Image-to-Image Translation with Conditional Adversarial Nets*](https://phillipi.github.io/pix2pix/).
 
 - [Before you begin](#before-you-begin)
 - [Getting started](#getting-started)
@@ -37,7 +37,7 @@ To train a model you need many pairs of images of "before" and "after". The clas
 
 Use the helper function `p2p.util.downloadFacades` to download and prepare the dataset for model training. Once that's ready you will have two folders 'A' the input labels, and 'B' the desired output images. 
 
-To train the model we need to provide the locations of the A and B images, as well as any training options. The model will thentry and learn to convert A images into B images!
+To train the model we need to provide the locations of the A and B images, as well as any training options. The model will then try and learn to convert A images into B images!
 
 ```matlab
 [labelFolder, targetFolder] = p2p.util.downloadFacades();
@@ -71,7 +71,7 @@ imshowpair(exampleInput, exampleOutput, "montage");
 
 ![](docs/labels.png)![](docs/output.jpg)
 
-Run an example you can directly run in MATLAB see the [Getting Started](docs/getting_started.mlx) live script.
+For an example you can directly run in MATLAB see the [Getting Started](docs/getting_started.mlx) live script.
 
 ## Any problems?
 
