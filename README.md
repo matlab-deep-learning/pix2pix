@@ -1,5 +1,8 @@
 # pix2pix - Image to Image Translation Using Generative Adversarial Networks
 
+![circecli](https://circleci.com/gh/matlab-deep-learning/pix2pix.svg?style=svg)
+[![codecov](https://codecov.io/gh/matlab-deep-learning/pix2pix/branch/master/graph/badge.svg)](https://codecov.io/gh/matlab-deep-learning/pix2pix)
+
 This repository contains MATLAB code to implement the pix2pix image to image translation method described in the paper by [Isola et al. *Image-to-Image Translation with Conditional Adversarial Nets*](https://phillipi.github.io/pix2pix/).
 
 - [Before you begin](#before-you-begin)
