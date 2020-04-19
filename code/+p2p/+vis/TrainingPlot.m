@@ -109,7 +109,7 @@ classdef TrainingPlot < handle
             
             % only take the first channel for n != 3
             if nChannels ~= 3
-                imOut = imOut(:,:,1);
+                imOut = imOut(:,:,1,:);
             end
         end
     end
