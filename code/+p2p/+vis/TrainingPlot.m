@@ -12,7 +12,6 @@ classdef TrainingPlot < handle
         InputsIm
         OutputsIm
         ExampleInputs
-        PrepForPlot = @(x) (gather(extractdata(x)) + 1)/2
         Lines = matlab.graphics.animation.AnimatedLine.empty
         StartTime
     end
@@ -45,14 +44,13 @@ classdef TrainingPlot < handle
         
         function update(obj, epoch, iteration,  ...
                     gLoss, lossL1, ganLoss, dLoss, generator)
-            % TODO update loss plots
             obj.updateImages(generator)
             obj.updateLines(epoch, iteration, gLoss, lossL1, ganLoss, dLoss);
             drawnow();
         end
         
         function initImages(obj)
-            displayIm = obj.PrepForPlot(obj.ExampleInputs);
+            displayIm = obj.prepForPlot(obj.ExampleInputs);
             montageIm = imtile(displayIm);
             obj.InputsIm = imshow(montageIm, "Parent", obj.InputsAx);
             
@@ -100,6 +98,19 @@ classdef TrainingPlot < handle
             addpoints(obj.Lines(2), iteration, double(lossL1));
             addpoints(obj.Lines(3), iteration, double(ganLoss));
             addpoints(obj.Lines(4), iteration, double(dLoss));
+        end
+        
+    end
+    
+    methods (Static)
+        function imOut = prepForPlot(im)
+            nChannels = size(im, 3);
+            imOut = (gather(extractdata(im)) + 1)/2;
+            
+            % only take the first channel for n != 3
+            if nChannels ~= 3
+                imOut = imOut(:,:,1);
+            end
         end
     end
 end
