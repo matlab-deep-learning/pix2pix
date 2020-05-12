@@ -60,7 +60,7 @@ classdef TrainingPlot < handle
         
         function updateImages(obj, generator)
             output = tanh(generator.forward(obj.ExampleInputs));
-            displayIm = obj.PrepForPlot(output);
+            displayIm = obj.prepForPlot(output);
             obj.OutputsIm.CData = imtile(displayIm);
         end
         
